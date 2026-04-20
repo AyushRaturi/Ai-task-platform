@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ai-task-platform
+
+resources:
+  - ../../base
+
+images:
+  - name: ayushraturi/ai-app-backend
+    newTag: latest
+  - name: ayushraturi/ai-app-frontend
+    newTag: latest
+  - name: ayushraturi/ai-app-worker
+    newTag: latest
